@@ -1,0 +1,31 @@
+[package]
+name = "reclaim-path"
+version = "0.1.0"
+authors = ["bramm <georg.bramm@aisec.fraunhofer.de>"]
+edition = "2018"
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+[dependencies]
+rust-se = { git = "https://github.com/georgbramm/rust-se" }
+actix = "0.9.0"
+actix-codec = "0.2.0"
+actix-web = { version="2.0.0", features=["openssl"] }
+actix-web-actors = "2.0.0"
+actix-files = "0.2.1"
+actix-rt = "1.0.0"
+actix-service = "1.0.0"
+awc = "1.0.1"
+env_logger = "0.6"
+futures = "0.3.1"
+bytes = "0.5.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+json = "*"
+openssl = "0.10"
